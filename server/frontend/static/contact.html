@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Cars Dealership</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        body {
+            background-color: #f4f7fb;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #172554;
+        }
+
+        .navbar-brand,
+        .navbar .nav-link {
+            color: white !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #fbbf24 !important;
+            font-weight: bold;
+            border-bottom: 2px solid #fbbf24;
+        }
+
+        .contact-header {
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .contact-section {
+            padding: 45px 15px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-card h3 {
+            color: #1d4ed8;
+            margin-bottom: 18px;
+        }
+
+        .contact-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card a {
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .btn-contact {
+            background-color: #1d4ed8;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+        }
+
+        .btn-contact:hover {
+            background-color: #172554;
+            color: white;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Cars Dealership</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="/contact/">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="contact-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="mb-0">
+                Have a question about a car or dealership? We'd love to hear from you.
+            </p>
+        </div>
+    </header>
+
+    <!-- Contact Details -->
+    <main class="container contact-section">
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <div class="contact-card">
+                    <img
+                        src="/static/car_dealership.jpg"
+                        alt="Cars dealership"
+                        class="contact-image">
+
+                    <h3>Get in Touch</h3>
+                    <p>
+                        Our Cars Dealership team is here to help you find
+                        information about dealerships, vehicles, and customer reviews.
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:support@carsdealership.example">
+                            support@carsdealership.example
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        <a href="tel:+911234567890">+91 12345 67890</a>
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong>
+                        Pune, Maharashtra, India
+                    </p>
+
+                    <p>
+                        <strong>Business Hours:</strong><br>
+                        Monday – Saturday: 9:00 AM – 6:00 PM<br>
+                        Sunday: Closed
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+                <div class="contact-card">
+                    <h3>Send Us a Message</h3>
+
+                    <form id="contactForm">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name"
+                               class="form-control"
+                               placeholder="Enter your full name" required>
+
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email"
+                               class="form-control"
+                               placeholder="Enter your email address" required>
+
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                               class="form-control"
+                               placeholder="Enter the subject" required>
+
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message"
+                                  class="form-control" rows="5"
+                                  placeholder="Write your message here"
+                                  required></textarea>
+
+                        <button type="submit" class="btn btn-contact">
+                            Send Message
+                        </button>
+
+                        <p id="formMessage" class="mt-3" role="status"></p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p class="mb-0">
+            &copy; 2026 Cars Dealership. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="/static/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("formMessage").textContent =
+                "Thank you for contacting us. This demo form does not send messages yet.";
+        });
+    </script>
+
+</body>
+</html>
